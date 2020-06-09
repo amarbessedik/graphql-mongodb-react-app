@@ -18,7 +18,8 @@ var books = [
   { name: "The Long Earth", genre: "Sci-Fi", id: "3", authorId: '3' },
   { name: 'The Hero of Ages', genre: 'Fantasy', id:'4', authorId: '2' },
   { name: 'The Color of Magic', genre: 'Fantasy', id: '5', authorId: '3' },
-  { name: 'The Light Fantastic', genre: 'Fantasy', id: '6', authorId: '3' }
+  { name: 'The Light Fantastic', genre: 'Fantasy', id: '6', authorId: '3' },
+  { name: 'Charli Chaplin', genre: 'Comedy', id: '7', authorId: '3' }
 ];
 
 const authors = [
@@ -88,9 +89,9 @@ const RootQuery = new GraphQLObjectType({
     authors:{
         type: new GraphQLList(AuthorType),
         resolve(parent, args){
-            return authors;
+             return authors;
         }
-    }
+    } 
   },
 });
 
